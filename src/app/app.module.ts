@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 const myRoute:Routes=[
   {
@@ -18,6 +20,9 @@ const myRoute:Routes=[
   },
   {
     path:"userlogin",component:UserLoginComponent
+  },
+  {
+    path:"userprofile",component:ViewProfileComponent
   }
 ]
 
@@ -26,13 +31,15 @@ const myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     UserRegistrationComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
