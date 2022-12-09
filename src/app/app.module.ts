@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 const myRoute:Routes=[
   {
@@ -14,6 +15,9 @@ const myRoute:Routes=[
   },
   {
     path:"registration",component:UserRegistrationComponent
+  },
+  {
+    path:"userlogin",component:UserLoginComponent
   }
 ]
 
@@ -21,7 +25,8 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
