@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
+  constructor(private route:Router){}
 
   userName=""
   password=""
@@ -18,6 +20,8 @@ export class AdminLoginComponent {
     console.log(data)
     if (this.userName=="admin" && this.password=="12345") {
       alert("valid login")
+      this.route.navigate(['/viewAllComplaint'])
+
       
     } else {
       alert("Invalid login")

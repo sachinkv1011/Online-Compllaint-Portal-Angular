@@ -10,6 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { AddComplaintComponent } from './add-complaint/add-complaint.component';
+import { UsernavComponent } from './usernav/usernav.component';
+import { AdminNavComponent } from './admin-nav/admin-nav.component';
+import { AdminViewAllComplaintsComponent } from './admin-view-all-complaints/admin-view-all-complaints.component';
 
 const myRoute:Routes=[
   {
@@ -23,6 +27,12 @@ const myRoute:Routes=[
   },
   {
     path:"userprofile",component:ViewProfileComponent
+  },
+  {
+    path:"addcomplaint",component:AddComplaintComponent
+  },
+  {
+    path:"viewAllComplaint",component:AdminViewAllComplaintsComponent
   }
 ]
 
@@ -32,7 +42,11 @@ const myRoute:Routes=[
     AdminLoginComponent,
     UserRegistrationComponent,
     UserLoginComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    AddComplaintComponent,
+    UsernavComponent,
+    AdminNavComponent,
+    AdminViewAllComplaintsComponent
   ],
   imports: [
     BrowserModule,

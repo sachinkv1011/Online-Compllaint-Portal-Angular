@@ -1,0 +1,32 @@
+<app-admin-nav></app-admin-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table border border-2">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Complaints</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of data">
+                            <td>{{i.name}}</td>
+                            <td>{{i.phone_no}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.complaints}}</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

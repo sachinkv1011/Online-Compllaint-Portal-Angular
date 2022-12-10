@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-user-registration',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-registration.component.css']
 })
 export class UserRegistrationComponent {
+  constructor(private api:ApiService){}
 
   name=""
   phoneNo=""
@@ -24,6 +26,17 @@ export class UserRegistrationComponent {
       "password":this.password
     }
     console.log(data)
+    this.api.registration(data).subscribe(
+      (response)=>{
+        console.log(response)
+        if(response == "success"){
+          alert("Registration Successful")
+        }
+        else{
+          alert("Something has went wrong")
+        }
+      }
+    )
 
   }
 
